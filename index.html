@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/client.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+        @keyframes teardown {
+            0% { opacity: 0; top: 40%; }
+            100% { opacity: 0.99; top: 50%; }
+        }
+
+        #popup {
+            position: fixed;
+            z-index: 10;
+            opacity: 1;
+            top: 40%;
+            left: 50%;
+            width:55%;
+            height: 10%;
+            transform: translate(-50%, -50%);
+            background-color: lightgrey;
+            color: black;
+            padding: 10px;
+            border-radius: 15px;
+            animation-name: teardown;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+        }
+
+        /** Titre au dessus du tableau **/
+        #popup h2{
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+            margin: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Device Management</title>
+</head>
+<body>
+<h1>Mini Projet : Device Management</h1>
+<div id="container">
+<div id="lists" style="border : double ; display: table ; padding: 5px ; margin: 5px">
+
+
+</div>
+
+<div id="combinaisons"></div>
+<input type="button" id="btnDeclarer" value="Declarer">
+<input type="button" id="btnAssocier" value="Associer">
+<input type="button" id="btnDissocier" value="Dissocier">
+<input type="button" id="btnUpdateFirmware" value="Mettre à jour le firmware">
+</div>
+</body>
+</html>
